@@ -17,6 +17,7 @@ __global__ void SharedAccess(float* out, const float* in, bool padded) {
     out[idx] = tile_plain[x][y];
   }
 }
+
 int main(int argc, char** argv) {
   bool padded = argc > 1 && std::atoi(argv[1]);
   float *a = nullptr, *b = nullptr;
